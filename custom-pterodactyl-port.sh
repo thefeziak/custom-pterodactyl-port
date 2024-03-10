@@ -9,11 +9,11 @@ apt install sudo -y
 # Installing python3
 sudo apt install python3 -y
 
-# Installing python3-pip
-sudo apt install python3-pip -y
-
 # Installing python3-argparse
-sudo pip install argparse
+sudo apt install python3-argparse -y
+
+# Installing screen
+sudo apt install screen -y
 
 # Installing curl
 sudo apt install curl -y
