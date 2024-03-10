@@ -18,12 +18,15 @@ sudo python3 -m pip install argparse --break-system-packages
 # Installing screen
 sudo apt install screen -y
 
-# Installing curl
-sudo apt install curl -y
+# Installing wget
+sudo apt install wget -y
 
 # User port typing
 echo "Type port: "
 read port
 
-# Running 
-sudo screen -dmS custom-pterodactyl-port bash -c "sudo curl https://github.com/fifi75598/custom-pterodactyl-port/main/custom-pterodactyl-port.py | sudo python3 - --port=$port; exec bash"
+# Downloading file to run
+sudo wget https://github.com/fifi75598/custom-pterodactyl-port/main/custom-pterodactyl-port.py
+
+# Running
+sudo screen -dmS custom-pterodactyl-port bash -c "sudo python3 custom-pterodactyl-port.py --port=$port; exec bash"
