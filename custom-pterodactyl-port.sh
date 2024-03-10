@@ -9,8 +9,11 @@ apt install sudo -y
 # Installing python3
 sudo apt install python3 -y
 
+# Installing python3-pip
+sudo apt install python3-pip -y
+
 # Installing python3-argparse
-sudo apt install python3-argparse -y
+sudo python3 -m pip install argparse --break-system-packages
 
 # Installing screen
 sudo apt install screen -y
